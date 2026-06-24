@@ -44,7 +44,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 8vw;display:fle
 .nav-mobile a{font-size:14px;color:var(--text-mid);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line);letter-spacing:0.06em;transition:color 0.3s;}
 .nav-mobile a:last-child{border-bottom:none;}
 .nav-mobile a:hover{color:var(--accent);}
-.nav-mobile-cta{background:var(--accent);color:white!important;padding:14px 0;text-align:center;border-radius:4px;margin-top:12px;letter-spacing:0.1em!important;}
+.nav-mobile-cta{background:var(--accent);color:white!important;padding:14px 16px;text-align:center;border-radius:4px;margin-top:12px;letter-spacing:0.1em!important;display:flex;flex-direction:column;align-items:center;gap:4px;border-bottom:none!important;}
+.nav-mobile-cta .btn-sub{font-size:10px;letter-spacing:0.06em;opacity:0.85;font-weight:400;}
 @media(max-width:900px){.nav-links{display:none;}.nav-hamburger{display:flex;}}
 @media(max-width:600px){nav{padding:14px 5vw;}}
 
@@ -120,21 +121,34 @@ section{position:relative;z-index:1;}
 /* JOURNEY */
 .journey-section-bg{background:var(--bg2);}
 .cycle-visual{margin-top:40px;}
-.cycle-stage{display:grid;grid-template-columns:1fr 120px 1fr;gap:0;max-width:1000px;margin:0 auto;align-items:stretch;}
+.cycle-stage{display:grid;grid-template-columns:1fr 120px 1fr;grid-template-rows:auto 1fr 1fr;gap:0;max-width:1000px;margin:0 auto;align-items:stretch;}
 .cycle-col-header{padding:14px 20px 16px;text-align:center;border-radius:10px 10px 0 0;}
-.cycle-col-body{display:flex;flex-direction:column;gap:14px;padding:20px 16px;border-radius:0 0 10px 10px;}
-.product-header{background:linear-gradient(135deg,var(--accent),var(--mid));color:white;}
-.human-header{background:linear-gradient(135deg,var(--teal),#2A7A74);color:white;}
-.product-body{background:rgba(42,155,176,0.06);border:1.5px solid rgba(42,155,176,0.25);border-top:none;}
-.human-body{background:rgba(58,158,148,0.06);border:1.5px solid rgba(58,158,148,0.25);border-top:none;}
-.col-label-en{font-size:9px;letter-spacing:0.25em;opacity:0.85;margin-bottom:3px;}
-.col-label-ja{font-size:15px;font-weight:400;letter-spacing:0.05em;}
-.col-label-desc{font-size:10px;opacity:0.75;margin-top:3px;}
-.cycle-card{background:white;border:1px solid var(--accent-pale);border-radius:10px;padding:20px 18px;transition:transform 0.3s,box-shadow 0.3s;}
+.cycle-header-product{grid-column:1;grid-row:1;}
+.cycle-header-human{grid-column:3;grid-row:1;}
+.cycle-header-gap{grid-column:2;grid-row:1;}
+.cycle-cell{padding:20px 16px;display:flex;align-items:stretch;}
+.cycle-cell-top{padding-top:20px;padding-bottom:7px;}
+.cycle-cell-bottom{padding-top:7px;padding-bottom:20px;border-radius:0 0 10px 10px;}
+.cycle-row1-product{grid-column:1;grid-row:2;}
+.cycle-row1-human{grid-column:3;grid-row:2;}
+.cycle-row2-product{grid-column:1;grid-row:3;}
+.cycle-row2-human{grid-column:3;grid-row:3;}
+.product-body{background:rgba(42,155,176,0.06);border-left:1.5px solid rgba(42,155,176,0.25);border-right:1.5px solid rgba(42,155,176,0.25);}
+.product-body.cycle-cell-top{border-top:none;}
+.product-body.cycle-row2-product{border-bottom:1.5px solid rgba(42,155,176,0.25);}
+.human-body{background:rgba(58,158,148,0.06);border-left:1.5px solid rgba(58,158,148,0.25);border-right:1.5px solid rgba(58,158,148,0.25);}
+.human-body.cycle-cell-top{border-top:none;}
+.human-body.cycle-row2-human{border-bottom:1.5px solid rgba(58,158,148,0.25);}
+.cycle-card{background:white;border:1px solid var(--accent-pale);border-radius:10px;padding:20px 18px;transition:transform 0.3s,box-shadow 0.3s;width:100%;height:100%;display:flex;flex-direction:column;}
 .cycle-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(42,155,176,0.1);}
 .cycle-card.product{border-top:3px solid var(--accent);}
 .cycle-card.human{border-top:3px solid var(--teal-light);}
-.cycle-center{position:relative;display:flex;align-items:center;justify-content:center;}
+.cycle-center{position:relative;display:flex;align-items:center;justify-content:center;grid-column:2;grid-row:2 / 4;}
+.product-header{background:linear-gradient(135deg,var(--accent),var(--mid));color:white;}
+.human-header{background:linear-gradient(135deg,var(--teal),#2A7A74);color:white;}
+.col-label-en{font-size:9px;letter-spacing:0.25em;opacity:0.85;margin-bottom:3px;}
+.col-label-ja{font-size:15px;font-weight:400;letter-spacing:0.05em;}
+.col-label-desc{font-size:10px;opacity:0.75;margin-top:3px;}
 #cycleCanvas{position:absolute;inset:-60px -20px;width:calc(100% + 40px);height:calc(100% + 120px);pointer-events:none;}
 .cycle-center-icon{width:56px;height:56px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 10px var(--accent-pale);z-index:2;position:relative;}
 @keyframes pulseGlow{0%,100%{box-shadow:0 0 0 8px var(--accent-pale);}50%{box-shadow:0 0 0 16px rgba(42,155,176,0.08);}}
@@ -145,8 +159,8 @@ section{position:relative;z-index:1;}
 .journey-type.p{color:var(--accent);}
 .journey-type.h{color:var(--teal);}
 .journey-title{font-size:16px;font-weight:400;color:var(--deep);margin-bottom:8px;}
-.journey-desc{font-size:13px;color:var(--text-mid);line-height:1.9;overflow-wrap:break-word;word-break:auto-phrase;}
-.journey-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px;}
+.journey-desc{font-size:13px;color:var(--text-mid);line-height:1.9;overflow-wrap:break-word;word-break:auto-phrase;flex:1;}
+.journey-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:10px;}
 .journey-tag{font-size:10px;padding:3px 8px;border-radius:20px;background:var(--bg2);color:var(--text-mid);}
 /* キャリアパートナー傘枠 */
 .cp-umbrella{
@@ -341,8 +355,21 @@ footer{background:#061820;padding:32px 8vw;font-size:11px;color:rgba(126,200,216
   .hero-text{padding:0 6vw;}
   .hero-title{white-space:normal;font-size:clamp(24px,7vw,36px);}
   .hero-sub{white-space:normal!important;font-size:15px;}
-  .cycle-stage{grid-template-columns:1fr;}
+  .cycle-stage{display:flex;flex-direction:column;}
+  .cycle-header-product{order:1;}
+  .cycle-row1-product{order:2;}
+  .cycle-row2-product{order:3;}
+  .cycle-header-human{order:4;}
+  .cycle-row1-human{order:5;}
+  .cycle-row2-human{order:6;}
+  .cycle-header-gap{display:none;}
+  .cycle-header-product,.cycle-header-human,.cycle-row1-product,.cycle-row1-human,.cycle-row2-product,.cycle-row2-human{grid-column:auto;grid-row:auto;}
   .cycle-center{display:none;}
+  .cycle-cell-top,.cycle-cell-bottom{padding:12px 16px;}
+  .product-body,.human-body{border:1.5px solid rgba(42,155,176,0.25);border-top:none;border-radius:0;}
+  .human-body{border-color:rgba(58,158,148,0.25);}
+  .cycle-row2-product,.cycle-row2-human{border-radius:0 0 10px 10px;border-bottom:1.5px solid rgba(42,155,176,0.25);}
+  .human-body.cycle-row2-human{border-bottom-color:rgba(58,158,148,0.25);}
   .cycle-outcome-cards{grid-template-columns:1fr;}
   .feature-grid{grid-template-columns:1fr 1fr;}
   .carehug-grid{grid-template-columns:1fr 1fr;}
@@ -375,7 +402,7 @@ footer{background:#061820;padding:32px 8vw;font-size:11px;color:rgba(126,200,216
     <a class="nav-link" href="pricing.html">料金</a>
     <a class="nav-link" href="faq.html">よくある質問</a>
     <a class="nav-link" href="https://careerpartner.jp/" target="_blank">運営会社</a>
-    <a class="nav-cta" href="https://carefle.jp/sign-up" target="_blank">▶ まず無料診断してみる</a>
+    <a class="nav-cta" href="https://carefle.jp/sign-up" target="_blank">自分との対話をはじめる</a>
   </div>
   <div class="nav-hamburger" onclick="toggleNav()">
     <span></span><span></span><span></span>
@@ -387,7 +414,10 @@ footer{background:#061820;padding:32px 8vw;font-size:11px;color:rgba(126,200,216
   <a href="pricing.html">料金</a>
   <a href="faq.html">よくある質問</a>
   <a href="https://careerpartner.jp/" target="_blank">運営会社</a>
-  <a href="https://carefle.jp/sign-up" target="_blank" class="nav-mobile-cta">▶ まず無料診断してみる</a>
+  <a href="https://carefle.jp/sign-up" target="_blank" class="nav-mobile-cta">
+    自分との対話をはじめる
+    <span class="btn-sub">まず約10分で無料診断してみる</span>
+  </a>
 </div>
 
 <!-- HERO【1】元の写真ビジュアルに戻す -->
@@ -524,31 +554,27 @@ footer{background:#061820;padding:32px 8vw;font-size:11px;color:rgba(126,200,216
         </div>
         <p class="cp-umbrella-sublabel">プロダクト × ヒト の循環型サービス</p>
       <div class="cycle-stage">
-        <div class="cycle-col">
-          <div class="cycle-col-header product-header">
-            <div class="col-label-en">PRODUCT</div>
-            <div class="col-label-ja">キャリフレ</div>
-            <div class="col-label-desc">自分を整理して残す場所</div>
-          </div>
-          <div class="cycle-col-body product-body">
-            <div class="cycle-card product">
-              <div class="journey-card-icon p-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2A9BB0" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
-              </div>
-              <div class="journey-type p">STEP 01</div>
-              <div class="journey-title">今の自分を知る</div>
-              <div class="journey-desc">キャリア満足度診断で現在地を確認。結果表示後、内省チャットが自動起動し、数字が自分の言葉に変わる最初の体験が始まります。</div>
-              <div class="journey-tags"><span class="journey-tag">キャリア満足度診断</span><span class="journey-tag">内省チャット</span></div>
+        <div class="cycle-col-header product-header cycle-header-product">
+          <div class="col-label-en">PRODUCT</div>
+          <div class="col-label-ja">キャリフレ</div>
+          <div class="col-label-desc">自分を整理して残す場所</div>
+        </div>
+        <div class="cycle-header-gap" aria-hidden="true"></div>
+        <div class="cycle-col-header human-header cycle-header-human">
+          <div class="col-label-en">HUMAN</div>
+          <div class="col-label-ja">キャリフレセッション</div>
+          <div class="col-label-desc">プロと話し、気づきを深める場所</div>
+        </div>
+
+        <div class="cycle-cell product-body cycle-cell-top cycle-row1-product">
+          <div class="cycle-card product">
+            <div class="journey-card-icon p-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2A9BB0" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
             </div>
-            <div class="cycle-card product">
-              <div class="journey-card-icon p-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2A9BB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-              </div>
-              <div class="journey-type p">STEP 02</div>
-              <div class="journey-title">気づきを蓄積する</div>
-              <div class="journey-desc">日記・人生史・自己診断——過去から現在を振り返り、持ち味レポートで「自分はどんな人か」「どう動く人か」が見えてきます。</div>
-              <div class="journey-tags"><span class="journey-tag">日記</span><span class="journey-tag">人生史</span><span class="journey-tag">持ち味レポート</span></div>
-            </div>
+            <div class="journey-type p">STEP 01</div>
+            <div class="journey-title">今の自分を知る</div>
+            <div class="journey-desc">キャリア満足度診断で現在地を確認。結果表示後、内省チャットが自動起動し、数字が自分の言葉に変わる最初の体験が始まります。</div>
+            <div class="journey-tags"><span class="journey-tag">キャリア満足度診断</span><span class="journey-tag">内省チャット</span></div>
           </div>
         </div>
         <div class="cycle-center">
@@ -567,31 +593,38 @@ footer{background:#061820;padding:32px 8vw;font-size:11px;color:rgba(126,200,216
             </div>
           </div>
         </div>
-        <div class="cycle-col">
-          <div class="cycle-col-header human-header">
-            <div class="col-label-en">HUMAN</div>
-            <div class="col-label-ja">キャリフレセッション</div>
-            <div class="col-label-desc">プロと話し、気づきを深める場所</div>
+        <div class="cycle-cell human-body cycle-cell-top cycle-row1-human">
+          <div class="cycle-card human">
+            <div class="journey-card-icon h-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3A9E94" stroke-width="1.6" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="journey-type h">STEP 03</div>
+            <div class="journey-title">プロと話す</div>
+            <div class="journey-desc">一人では整理しきれない時、他者との対話の中で初めて見えてくるものがある。そんな時に、プロと話す。</div>
+            <div class="journey-tags"><span class="journey-tag">セッション</span></div>
           </div>
-          <div class="cycle-col-body human-body">
-            <div class="cycle-card human">
-              <div class="journey-card-icon h-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3A9E94" stroke-width="1.6" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              </div>
-              <div class="journey-type h">STEP 03</div>
-              <div class="journey-title">プロと話す</div>
-              <div class="journey-desc">一人では整理しきれない時、他者との対話の中で初めて見えてくるものがある。そんな時に、プロと話す。</div>
-              <div class="journey-tags"><span class="journey-tag">セッション</span></div>
+        </div>
+
+        <div class="cycle-cell product-body cycle-cell-bottom cycle-row2-product">
+          <div class="cycle-card product">
+            <div class="journey-card-icon p-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2A9BB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
             </div>
-            <div class="cycle-card human">
-              <div class="journey-card-icon h-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3A9E94" stroke-width="1.6" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-              </div>
-              <div class="journey-type h">STEP 04</div>
-              <div class="journey-title">気づきを自分に還す</div>
-              <div class="journey-desc">セッションでの気づきを日記に記録する。ログが積み上がるたびに、心の声がより鮮明になっていく。</div>
-              <div class="journey-tags"><span class="journey-tag">振り返り記録</span></div>
+            <div class="journey-type p">STEP 02</div>
+            <div class="journey-title">気づきを蓄積する</div>
+            <div class="journey-desc">日記・人生史・自己診断——過去から現在を振り返り、持ち味レポートで「自分はどんな人か」「どう動く人か」が見えてきます。</div>
+            <div class="journey-tags"><span class="journey-tag">日記</span><span class="journey-tag">人生史</span><span class="journey-tag">持ち味レポート</span></div>
+          </div>
+        </div>
+        <div class="cycle-cell human-body cycle-cell-bottom cycle-row2-human">
+          <div class="cycle-card human">
+            <div class="journey-card-icon h-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3A9E94" stroke-width="1.6" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             </div>
+            <div class="journey-type h">STEP 04</div>
+            <div class="journey-title">気づきを自分に還す</div>
+            <div class="journey-desc">セッションでの気づきを日記に記録する。ログが積み上がるたびに、心の声がより鮮明になっていく。</div>
+            <div class="journey-tags"><span class="journey-tag">振り返り記録</span></div>
           </div>
         </div>
       </div><!-- /.cycle-stage -->
