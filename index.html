@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
 <title>迷ったまま進む前に。｜キャリフレ（サービス紹介）</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -58,7 +58,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 8vw;display:fle
 .hero-ripple{position:absolute;border-radius:50%;border:1px solid var(--accent-light);opacity:0;animation:rippleExpand 6s ease-out infinite;pointer-events:none;}
 @keyframes rippleExpand{0%{transform:scale(0.3);opacity:0.5;}100%{transform:scale(3);opacity:0;}}
 .hero-label{font-size:11px;letter-spacing:0.25em;color:var(--accent);margin-bottom:40px;opacity:0;animation:fadeUp 1s ease 0.5s forwards;}
-.hero-title{font-family:'Noto Serif JP',serif;font-weight:300;font-size:clamp(28px,3.2vw,48px);line-height:1.8;letter-spacing:0.04em;white-space:nowrap;color:var(--deep);opacity:0;animation:fadeUp 1.2s ease 0.8s forwards;}
+.hero-title{font-family:'Noto Serif JP',serif;font-weight:600;font-size:26px;line-height:1.35;letter-spacing:0.02em;white-space:normal;color:var(--deep);opacity:0;animation:fadeUp 1.2s ease 0.8s forwards;}
+@media(min-width:640px){.hero-title{font-size:34px;}}
+@media(min-width:768px){.hero-title{font-size:48px;}}
+@media(min-width:1024px){.hero-title{font-size:50px;}}
 .hero-title em{font-style:normal;color:var(--accent);position:relative;}
 .hero-title em::after{content:'';position:absolute;bottom:2px;left:0;right:0;height:2px;background:var(--accent-light);transform:scaleX(0);transform-origin:left;animation:underlineExpand 0.8s ease 2s forwards;}
 @keyframes underlineExpand{to{transform:scaleX(1);}}
@@ -365,7 +368,6 @@ footer{background:#061820;padding:32px 8vw;font-size:11px;color:rgba(126,200,216
   .hero{min-height:100vh;padding:100px 0 60px;}
   .hero-bg::after{background:linear-gradient(180deg,rgba(240,248,250,0.93) 0%,rgba(240,248,250,0.88) 55%,rgba(240,248,250,0.60) 80%,rgba(240,248,250,0.25) 100%);}
   .hero-text{padding:0 6vw;}
-  .hero-title{white-space:normal;font-size:clamp(24px,7vw,36px);}
   .hero-sub{white-space:normal!important;font-size:15px;}
   .cycle-stage{display:flex;flex-direction:column;}
   .cycle-header-product{order:1;}
