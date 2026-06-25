@@ -244,6 +244,16 @@ section{position:relative;z-index:1;}
 .session-trigger strong{color:var(--deep);font-weight:400;}
 .target-lead{max-width:640px;margin:28px auto 0;font-size:14px;color:var(--text-mid);line-height:2;padding:20px 24px;background:white;border:1px solid var(--accent-pale);border-radius:12px;}
 @media(max-width:768px){.report-ladder{grid-template-columns:1fr;}}
+.macro-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:960px;margin:36px auto 0;text-align:left;}
+.macro-step{background:white;border:1.5px solid var(--accent-pale);border-radius:12px;padding:20px 16px;}
+.macro-step-num{font-size:9px;letter-spacing:0.18em;color:var(--accent);margin-bottom:8px;}
+.macro-step-title{font-size:15px;font-weight:400;color:var(--deep);margin-bottom:6px;}
+.macro-step-desc{font-size:11px;color:var(--text-light);line-height:1.75;}
+.macro-step-desc strong{font-weight:400;color:var(--text-mid);}
+.usage-detail-wrap{margin-top:48px;padding-top:40px;border-top:1px solid var(--line);}
+.usage-detail-note{font-size:13px;color:var(--text-mid);text-align:center;line-height:1.85;}
+.usage-detail-note strong{font-weight:400;color:var(--deep);}
+@media(max-width:768px){.macro-steps{grid-template-columns:1fr;}}
 .product-cta-wrap{margin-top:36px;display:flex;flex-direction:column;align-items:center;gap:10px;}
 .product-cta-note{font-size:12px;color:var(--text-light);}
 
@@ -1104,14 +1114,40 @@ footer{background:#061820;padding:32px 8vw;font-size:11px;color:rgba(126,200,216
   </div>
 </section>
 
-<!-- 【5】サービスの使い方 キャリフレ中心フロー -->
-<section>
+<!-- 【5】サービスの使い方：L1 4ステップ ＋ L3 詳細フロー -->
+<section id="section-usage">
   <div class="section-inner dual-flow-section" style="border-top:1px solid var(--line);">
     <div class="section-tag reveal">サービスの使い方</div>
-    <h2 class="section-title reveal">キャリフレで整理して、必要ならプロと深める。</h2>
-    <p class="section-lead reveal">まずはキャリフレで自分を整理することから始めます。診断のあと内省チャットが自動起動し、モヤモヤが言葉になっていきます。深めたいときは任意でセッションを選べます。</p>
+    <h2 class="section-title reveal">4ステップで自己理解を深める</h2>
 
-    <div class="dual-flow-wrap reveal">
+    <div class="macro-steps reveal">
+      <div class="macro-step">
+        <div class="macro-step-num">STEP 01</div>
+        <div class="macro-step-title">診断する</div>
+        <div class="macro-step-desc"><strong>「今の自分」を可視化</strong><br>キャリア満足度診断</div>
+      </div>
+      <div class="macro-step">
+        <div class="macro-step-num">STEP 02</div>
+        <div class="macro-step-title">記録する</div>
+        <div class="macro-step-desc"><strong>「過去と現在」を言語化</strong><br>日記・人生史・マイルストーン</div>
+      </div>
+      <div class="macro-step">
+        <div class="macro-step-num">STEP 03</div>
+        <div class="macro-step-title">向き合う</div>
+        <div class="macro-step-desc"><strong>深い気づきを得る</strong><br>内省チャット・持ち味レポート・キャリア軸レポ</div>
+      </div>
+      <div class="macro-step">
+        <div class="macro-step-num">STEP 04</div>
+        <div class="macro-step-title">行動する</div>
+        <div class="macro-step-desc"><strong>「未来」を具体化</strong><br>キャリアプラン・アクションプラン</div>
+      </div>
+    </div>
+
+    <div class="usage-detail-wrap reveal">
+      <p class="usage-detail-note"><strong>4ステップ（診断する→記録する→向き合う→行動する）のくわしい流れです。</strong></p>
+      <p class="section-lead" style="margin-top:20px;">まずはキャリフレで自分を整理することから始めます。診断のあと内省チャットが自動起動し、モヤモヤが言葉になっていきます。深めたいときは任意でキャリフレセッションを選べます。</p>
+
+    <div class="dual-flow-wrap">
       <!-- メインフロー：キャリフレ -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:0;max-width:540px;margin:48px auto 0;">
         <div class="flow-col-label product" style="margin-bottom:24px;">キャリフレでスタート</div>
@@ -1182,7 +1218,7 @@ footer{background:#061820;padding:32px 8vw;font-size:11px;color:rgba(126,200,216
           <div style="display:flex;align-items:center;gap:16px;">
             <div style="min-width:60px;text-align:center;">
               <div style="font-size:9px;letter-spacing:0.18em;color:var(--teal);margin-bottom:2px;">OPTION</div>
-              <div style="font-size:13px;font-weight:400;color:var(--deep);">セッション</div>
+              <div style="font-size:13px;font-weight:400;color:var(--deep);">キャリフレセッション</div>
             </div>
             <div style="flex:1;font-size:12px;color:var(--text-light);line-height:1.7;">プロのカウンセラーとオンラインで対話（初回60分・継続90分）。セッション内容はキャリフレに記録して、さらに深い内省へ。</div>
           </div>
@@ -1210,6 +1246,7 @@ footer{background:#061820;padding:32px 8vw;font-size:11px;color:rgba(126,200,216
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
