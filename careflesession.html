@@ -30,7 +30,9 @@ img{max-width:100%;display:block;}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:14px 5vw;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+nav .nav-logo{display:inline-flex;align-items:center;text-decoration:none;flex-shrink:0;}
+nav .nav-logo img{display:block;height:28px;width:auto;max-width:min(160px,42vw);}
+@media(min-width:640px){nav .nav-logo img{height:32px;max-width:none;}}
 .nav-logo-icon{width:36px;height:36px;border-radius:50%;background:var(--accent-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .nav-logo-text{font-size:13px;font-weight:500;color:var(--deep);letter-spacing:0.04em;line-height:1.3;}
 .nav-logo-text small{display:block;font-size:9px;color:var(--accent);letter-spacing:0.15em;font-weight:400;}
@@ -214,7 +216,7 @@ section{position:relative;}
 /* FOOTER */
 footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
 .footer-inner{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;}
-.footer-brand .nav-logo{margin-bottom:16px;}
+.footer-brand .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-bottom:16px;}
 .footer-produced{font-size:10px;color:var(--text-light);letter-spacing:0.1em;}
 .footer-cp{font-size:22px;font-weight:700;color:var(--deep);letter-spacing:0.05em;margin-top:4px;}
 .footer-links{display:flex;flex-direction:column;gap:12px;}
@@ -226,11 +228,8 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
 <body>
 
 <nav>
-  <a class="nav-logo" href="careflesession.html">
-    <div class="nav-logo-icon">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2A9BB0" stroke-width="1.5"><circle cx="12" cy="13" r="7"/><circle cx="9" cy="11" r="1" fill="#2A9BB0"/><circle cx="15" cy="11" r="1" fill="#2A9BB0"/><path d="M10 15c.8.6 1.7.9 2 .9s1.2-.3 2-.9"/></svg>
-    </div>
-    <div class="nav-logo-text">キャリフレセッション</div>
+  <a class="nav-logo" href="index.html" aria-label="キャリフレ">
+    <img src="images/carefle-logo.png" alt="キャリフレ" width="500" height="100">
   </a>
   <div class="nav-links">
     <a class="nav-link" href="#features">サービス特徴</a>

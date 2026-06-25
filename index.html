@@ -31,7 +31,9 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP',sans-seri
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 8vw;display:flex;justify-content:space-between;align-items:center;background:rgba(240,248,250,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
-.nav-logo{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:400;color:var(--deep);letter-spacing:0.1em;text-decoration:none;white-space:nowrap;}
+.nav-logo{display:inline-flex;align-items:center;text-decoration:none;flex-shrink:0;}
+.nav-logo img{display:block;height:28px;width:auto;max-width:min(160px,42vw);}
+@media(min-width:640px){.nav-logo img{height:32px;max-width:none;}}
 .nav-links{display:flex;gap:24px;align-items:center;}
 .nav-link{font-size:12px;letter-spacing:0.06em;color:var(--text-light);text-decoration:none;transition:color 0.3s;white-space:nowrap;}
 .nav-link:hover,.nav-link.active{color:var(--accent);}
@@ -406,7 +408,9 @@ footer{background:#061820;padding:32px 8vw;font-size:11px;color:rgba(126,200,216
 <canvas class="ripple-canvas" id="rippleCanvas"></canvas>
 
 <nav>
-  <a class="nav-logo" href="index.html">キャリフレ</a>
+  <a class="nav-logo" href="index.html" aria-label="キャリフレ">
+    <img src="images/carefle-logo.png" alt="キャリフレ" width="500" height="100">
+  </a>
   <div class="nav-links">
     <a class="nav-link active" href="#top">サービス概要</a>
     <a class="nav-link" href="reflection.html">内省（リフレクション）とは</a>
