@@ -30,9 +30,10 @@ img{max-width:100%;display:block;}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:14px 5vw;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
-nav .nav-logo{display:inline-flex;align-items:center;text-decoration:none;flex-shrink:0;}
-nav .nav-logo img{display:block;height:28px;width:auto;max-width:min(160px,42vw);}
-@media(min-width:640px){nav .nav-logo img{height:32px;max-width:none;}}
+nav .nav-logo{display:inline-flex;align-items:center;text-decoration:none;flex-shrink:0;min-width:0;}
+nav .nav-logo img{display:block;height:28px;width:auto;max-width:min(148px,38vw);}
+nav .nav-logo-suffix{font-family:'Noto Serif JP',serif;font-weight:600;font-size:clamp(13px,3.6vw,17px);color:var(--deep);letter-spacing:0.02em;line-height:1;white-space:nowrap;margin-left:1px;}
+@media(min-width:640px){nav .nav-logo img{height:32px;max-width:none;}nav .nav-logo-suffix{font-size:17px;}}
 .nav-logo-icon{width:36px;height:36px;border-radius:50%;background:var(--accent-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .nav-logo-text{font-size:13px;font-weight:500;color:var(--deep);letter-spacing:0.04em;line-height:1.3;}
 .nav-logo-text small{display:block;font-size:9px;color:var(--accent);letter-spacing:0.15em;font-weight:400;}
@@ -228,8 +229,9 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
 <body>
 
 <nav>
-  <a class="nav-logo" href="index.html" aria-label="キャリフレ">
+  <a class="nav-logo" href="index.html" aria-label="キャリフレ・セッション">
     <img src="images/carefle-logo.png" alt="キャリフレ" width="500" height="100">
+    <span class="nav-logo-suffix">・セッション</span>
   </a>
   <div class="nav-links">
     <a class="nav-link" href="#features">サービス特徴</a>
