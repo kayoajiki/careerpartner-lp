@@ -56,8 +56,8 @@ nav .nav-logo img{display:block;height:28px;width:auto;max-width:min(240px,62vw)
 /* HERO */
 .hero{position:relative;margin-top:60px;min-height:520px;display:flex;align-items:stretch;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;z-index:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:68% 42%;filter:brightness(0.94) saturate(0.88);}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,250,252,0.98) 0%,rgba(245,250,252,0.92) 38%,rgba(245,250,252,0.55) 58%,rgba(245,250,252,0.12) 78%,transparent 100%);}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,250,252,0.97) 0%,rgba(245,250,252,0.88) 42%,rgba(245,250,252,0.35) 70%,transparent 100%);}
 .hero-inner{position:relative;z-index:1;padding:72px 5vw 56px;max-width:560px;display:flex;flex-direction:column;justify-content:center;}
 .hero-title{font-family:'Noto Serif JP',serif;font-weight:600;font-size:clamp(20px,7vw,50px);line-height:1.35;letter-spacing:0.02em;color:var(--deep);}
 .hero-title-line{display:block;white-space:nowrap;}
@@ -74,8 +74,6 @@ nav .nav-logo img{display:block;height:28px;width:auto;max-width:min(240px,62vw)
 @media(max-width:768px){
   .hero{min-height:auto;}
   .hero-inner{padding:56px 5vw 40px;}
-  .hero-bg img{object-position:74% 38%;}
-  .hero-bg::after{background:linear-gradient(180deg,rgba(245,250,252,0.97) 0%,rgba(245,250,252,0.9) 42%,rgba(245,250,252,0.72) 68%,rgba(245,250,252,0.28) 100%);}
   .hero-promo{margin-top:24px;}
 }
 @media(max-width:600px){.stats-bar{grid-template-columns:1fr;gap:20px;}.stat-item+.stat-item{border-top:1px solid var(--line);padding-top:16px;}.hero-promo{margin-top:32px;}}
@@ -260,7 +258,7 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-bg">
-    <img src="images/hero-session-online.jpg" alt="オンラインでキャリアカウンセラーと対話するイメージ">
+    <img src="静かな時間のノートとペン.png" alt="静かな対話の時間">
   </div>
   <div class="hero-inner">
     <h1 class="hero-title">
