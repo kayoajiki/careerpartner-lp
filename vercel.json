@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/session",
+      "destination": "/careflesession.html",
+      "permanent": true
+    }
+  ]
+}
