@@ -1,6 +1,24 @@
 {
   "redirects": [
     {
+      "source": "/careflesession.html",
+      "has": [{ "type": "host", "value": "careerpartner-lp.vercel.app" }],
+      "destination": "https://lp.carefle.jp/session",
+      "permanent": true
+    },
+    {
+      "source": "/session",
+      "has": [{ "type": "host", "value": "careerpartner-lp.vercel.app" }],
+      "destination": "https://lp.carefle.jp/session",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "careerpartner-lp.vercel.app" }],
+      "destination": "https://lp.carefle.jp/:path*",
+      "permanent": true
+    },
+    {
       "source": "/session",
       "destination": "/careflesession.html",
       "permanent": true
