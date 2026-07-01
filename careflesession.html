@@ -223,7 +223,9 @@ section{position:relative;}
 /* FOOTER */
 footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
 .footer-inner{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;}
-.footer-brand .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-bottom:16px;}
+.footer-brand .nav-logo{display:inline-flex;align-items:center;text-decoration:none;margin-bottom:16px;flex-shrink:0;min-width:0;}
+.footer-brand .nav-logo img{display:block;height:28px;width:auto;max-width:min(240px,70vw);}
+@media(min-width:640px){.footer-brand .nav-logo img{height:32px;max-width:none;}}
 .footer-produced{font-size:10px;color:var(--text-light);letter-spacing:0.1em;}
 .footer-cp{font-size:22px;font-weight:700;color:var(--deep);letter-spacing:0.05em;margin-top:4px;}
 .footer-links{display:flex;flex-direction:column;gap:12px;}
@@ -651,11 +653,8 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <a class="nav-logo" href="careflesession.html">
-        <div class="nav-logo-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2A9BB0" stroke-width="1.5"><circle cx="12" cy="13" r="7"/><circle cx="9" cy="11" r="1" fill="#2A9BB0"/><circle cx="15" cy="11" r="1" fill="#2A9BB0"/><path d="M10 15c.8.6 1.7.9 2 .9s1.2-.3 2-.9"/></svg>
-        </div>
-        <div class="nav-logo-text">キャリフレセッション</div>
+      <a class="nav-logo" href="careflesession.html" aria-label="キャリフレ・セッション">
+        <img src="images/carefle-session-logo.png" alt="キャリフレ × セッション" width="896" height="98">
       </a>
       <div class="footer-produced">運営</div>
       <div class="footer-cp">株式会社キャリアパートナー</div>
