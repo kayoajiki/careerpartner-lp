@@ -117,6 +117,10 @@ section{position:relative;}
 .step-name{font-size:20px;font-weight:700;color:var(--deep);margin-bottom:12px;}
 .step-desc{font-size:12px;color:var(--text-mid);line-height:1.95;text-align:left;}
 .steps-footer{text-align:center;margin-top:40px;font-size:13px;color:var(--text-mid);line-height:2;}
+.steps-footer-box{max-width:640px;margin:40px auto 0;text-align:center;background:var(--bg2);border-radius:var(--radius);padding:32px 28px;}
+.steps-footer-tag{display:inline-block;font-size:11px;color:var(--accent-dark);font-weight:700;letter-spacing:0.08em;background:white;border:1px solid var(--accent-pale);border-radius:20px;padding:4px 14px;margin-bottom:16px;}
+.steps-footer-main{font-size:clamp(16px,2.4vw,19px);font-weight:700;color:var(--deep);margin-bottom:12px;line-height:1.6;}
+.steps-footer-desc{font-size:13px;color:var(--text-mid);line-height:2;}
 @media(max-width:768px){.steps-grid{grid-template-columns:1fr;}.steps-grid::before{display:none;}}
 
 /* CAREFLE LINK */
@@ -125,21 +129,26 @@ section{position:relative;}
 .carefle-badge{display:inline-block;background:var(--accent);color:white;font-size:10px;letter-spacing:0.15em;padding:6px 14px;border-radius:20px;margin-bottom:20px;}
 .carefle-title{font-size:clamp(22px,3.5vw,30px);font-weight:700;color:var(--deep);line-height:1.6;margin-bottom:16px;}
 .carefle-lead{font-size:14px;color:var(--text-mid);line-height:2;margin-bottom:40px;max-width:720px;}
-.carefle-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:center;margin-bottom:40px;}
+.carefle-flow{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin-bottom:40px;}
 .carefle-node{background:white;border-radius:var(--radius);padding:24px 20px;text-align:center;border:1px solid var(--accent-pale);box-shadow:0 4px 16px rgba(42,155,176,0.06);}
 .carefle-node-label{font-size:10px;letter-spacing:0.12em;color:var(--accent);margin-bottom:8px;}
 .carefle-node-title{font-size:15px;font-weight:700;color:var(--deep);margin-bottom:8px;}
 .carefle-node-desc{font-size:11px;color:var(--text-mid);line-height:1.8;}
 .carefle-arrow{color:var(--accent-light);font-size:20px;text-align:center;}
-.carefle-points{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.carefle-tagline{text-align:center;font-size:clamp(18px,2.8vw,22px);font-weight:700;color:var(--deep);margin:-16px 0 8px;line-height:1.6;}
+.carefle-tagline-sub{text-align:center;font-size:13px;color:var(--text-mid);margin:0 0 40px;line-height:1.8;}
+.carefle-points{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px;}
 .carefle-point{background:white;border-radius:12px;padding:20px 22px;border-left:3px solid var(--accent);}
 .carefle-point h4{font-size:13px;font-weight:700;color:var(--deep);margin-bottom:8px;}
 .carefle-point p{font-size:12px;color:var(--text-mid);line-height:1.9;}
+.carefle-perk{background:rgba(255,255,255,0.72);border:1px dashed var(--accent-light);border-radius:12px;padding:18px 20px;}
+.carefle-perk-badge{display:inline-block;font-size:10px;letter-spacing:0.12em;color:var(--accent);background:var(--accent-pale);padding:4px 10px;border-radius:20px;margin-bottom:10px;}
+.carefle-perk h4{font-size:12px;font-weight:600;color:var(--text-mid);margin-bottom:8px;line-height:1.6;}
+.carefle-perk p{font-size:11px;color:var(--text-light);line-height:1.85;}
 .carefle-link{display:inline-flex;align-items:center;gap:6px;margin-top:32px;font-size:13px;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-light);}
 @media(max-width:768px){
   .carefle-flow{grid-template-columns:1fr;}
   .carefle-arrow{transform:rotate(90deg);}
-  .carefle-points{grid-template-columns:1fr;}
 }
 
 /* COUNSELORS */
@@ -226,8 +235,6 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
 .footer-brand .nav-logo{display:inline-flex;align-items:center;text-decoration:none;margin-bottom:16px;flex-shrink:0;min-width:0;}
 .footer-brand .nav-logo img{display:block;height:28px;width:auto;max-width:min(240px,70vw);}
 @media(min-width:640px){.footer-brand .nav-logo img{height:32px;max-width:none;}}
-.footer-produced{font-size:10px;color:var(--text-light);letter-spacing:0.1em;}
-.footer-cp{font-size:22px;font-weight:700;color:var(--deep);letter-spacing:0.05em;margin-top:4px;}
 .footer-links{display:flex;flex-direction:column;gap:12px;}
 .footer-links a{font-size:12px;color:var(--text-mid);text-decoration:none;}
 .footer-links a:hover{color:var(--accent);}
@@ -264,11 +271,11 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
   </div>
   <div class="hero-inner">
     <h1 class="hero-title">
-      <span class="hero-title-line">ひとりで考えても、</span>
-      <span class="hero-title-line">答えが出ないときに。</span>
+      <span class="hero-title-line">働く軸が見えてきたら、</span>
+      <span class="hero-title-line">次は「どう動くか」。</span>
     </h1>
     <div class="hero-divider"></div>
-    <p class="hero-sub">キャリアカウンセラーとの対話で、<br>違和感と選択肢を整理します。<br>モヤモヤ以上、転職未満の方へ。<br>キャリフレで整理したあと、<br>さらに深く話したいとき（任意・有料）。<br>詳細は<a href="pricing.html" style="color:var(--accent);">料金ページ</a>をご覧ください。</p>
+    <p class="hero-sub">キャリフレで育てた働く軸をもとに、<br>キャリアカウンセラーが、次の一歩を一緒に考えます。</p>
   </div>
 </section>
 
@@ -297,7 +304,7 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
       <a class="float-cta-btn" href="https://line.me/R/ti/p/@824flemq" target="_blank" rel="noopener noreferrer">LINEで空き枠を確認する &gt;</a>
       <div class="float-cta-note">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        モヤモヤ以上、転職未満の方へ。キャリフレで整理したあと、さらに深く話したいときの有料セッションです（任意）
+        モヤモヤ以上、転職未満の方へ。次の一歩を決めたいときの有料セッションです。
       </div>
     </div>
   </div>
@@ -306,19 +313,19 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
 <!-- PAIN -->
 <section id="pain">
   <div class="section-wrap" style="padding-top:40px;">
-    <h2 class="section-title">このような状態なら、<br class="sp-br">話しませんか？</h2>
+    <h2 class="section-title">一人で決めきれないことは<br class="sp-br">ありませんか？</h2>
     <div class="pain-list">
       <div class="pain-item">
         <div class="pain-dot-col"><div class="pain-dot"></div><div class="pain-line"></div></div>
-        <div class="pain-box">毎日の忙しさで<strong>本当に大切なこと</strong>がぼやけてしまう</div>
+        <div class="pain-box">働く軸は見えてきた。でも、<strong>次の一歩</strong>が決められない</div>
       </div>
       <div class="pain-item">
         <div class="pain-dot-col"><div class="pain-dot"></div><div class="pain-line"></div></div>
-        <div class="pain-box">自分と向き合う<strong>余白</strong>がなく、モヤモヤが積もる</div>
+        <div class="pain-box">頭では分かっているのに、<strong>不安</strong>で動き出せない</div>
       </div>
       <div class="pain-item">
         <div class="pain-dot-col"><div class="pain-dot"></div></div>
-        <div class="pain-box">相談したいのに<strong>遠慮</strong>してしまい、一人で胸がザワつく</div>
+        <div class="pain-box">転職するか、このまま続けるか。<strong>一人</strong>では決めきれない</div>
       </div>
     </div>
     <div class="pain-illus">
@@ -331,23 +338,23 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
         <path d="M22 34h-3M61 34h3"/>
       </svg>
     </div>
-    <p class="pain-close">その悩み、一緒に整理してみませんか？</p>
+    <p class="pain-close">働く軸は、一人でも育てられます。<br class="sp-br">でも、大きな選択は、誰かとの対話で前に進めることがあります。</p>
   </div>
 </section>
 
 <!-- STEPS -->
 <section id="process" style="background:white;padding-bottom:80px;">
   <div class="section-wrap">
-    <p class="steps-intro">セッションでは、答えを押し付けるのではなく、今のモヤモヤを言葉にし、選択肢を整理していきます。キャリフレの記録があると、より深い対話が可能です。</p>
-    <div class="section-tag">セッションで整理できること</div>
-    <h2 class="section-title" style="margin-top:8px;">対話を通じて、次の一歩が見えてくる</h2>
+    <p class="steps-intro">セッションでは、答えを押し付けるのではなく、話しながら、自分で決めるところまで一緒に進みます。キャリフレの記録があると、より深い対話が可能です。</p>
+    <div class="section-tag">セッションで決められること</div>
+    <h2 class="section-title" style="margin-top:8px;">対話を通じて、次の一歩を決める</h2>
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-num">01</div>
         <div class="step-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#2A9BB0" stroke-width="1.5"><path d="M8 12c0-4 3-7 8-7s8 3 8 7v2H8v-2z"/><path d="M6 14h20v10H6z"/><path d="M13 18h6"/></svg>
         </div>
-        <div class="step-name">話す</div>
+        <div class="step-name">決めるために、話す</div>
         <p class="step-desc">まとまっていなくても大丈夫。今感じていることを、そのままお聞きします。キャリフレの内省ログがあれば、対話の出発点がより明確になります。</p>
       </div>
       <div class="step-card">
@@ -355,7 +362,7 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
         <div class="step-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#2A9BB0" stroke-width="1.5"><path d="M16 4v8M10 8l6 4 6-4"/><path d="M8 14h16l-2 14H10L8 14z"/></svg>
         </div>
-        <div class="step-name">整理する</div>
+        <div class="step-name">決めるために、整理する</div>
         <p class="step-desc">不安・不満・希望・条件を整理し、悩みの正体を一緒に見つけます。持ち味レポートやキャリア軸レポの内容も参考にできます。</p>
       </div>
       <div class="step-card">
@@ -363,49 +370,50 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
         <div class="step-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#2A9BB0" stroke-width="1.5"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="4"/><path d="M16 6v4M16 22v4M6 16h4M22 16h4"/></svg>
         </div>
-        <div class="step-name">見える</div>
-        <p class="step-desc">転職する／しないの前に、次に考えるべきことが見えてきます。セッション後の気づきは、キャリフレに記録して内省を続けられます。</p>
+        <div class="step-name">自分で、決める</div>
+        <p class="step-desc">見えてきた働く軸をもとに、今の会社で挑戦を続けるのか。転職するのか。まずは上司に相談するのか。自分で納得できる一歩が決まれば、セッションは成功です。</p>
       </div>
     </div>
-    <p class="steps-footer">無理な勧誘はありません。転職を前提にしない、中立的なセッションです。</p>
+    <div class="steps-footer-box">
+      <span class="steps-footer-tag">求人紹介なし・中立支援</span>
+      <p class="steps-footer-main">転職を勧めるためのセッションではありません。</p>
+      <p class="steps-footer-desc">今の会社に残る。異動する。副業を始める。転職する。<br>どんな選択でも構いません。<br>一緒に考えたいのは、「あなたが納得できる選択」です。</p>
+    </div>
   </div>
 </section>
 
 <!-- CAREFLE INTEGRATION -->
 <section class="carefle-section" id="carefle">
   <div class="carefle-inner">
-    <span class="carefle-badge">キャリフレ × セッション</span>
-    <h2 class="carefle-title">キャリフレと<br>キャリフレセッションが<br>ひとつの循環になる。</h2>
-    <p class="carefle-lead">キャリフレセッションは、キャリフレとつながる対話です。キャリフレで日常の気づきを蓄え、セッションで深掘りし、再びキャリフレに戻る——この往復が、他にはない強みです。セッションは必須ではありません。</p>
+    <span class="carefle-badge">働く軸 → 次の一歩</span>
+    <h2 class="carefle-title">働く軸を、<br>次の一歩につなげる。</h2>
+    <p class="carefle-lead">キャリフレセッションは、<br>キャリフレの上位版ではありません。<br>役割が違います。<br><br>キャリフレは、働く軸を育てる場所。<br>セッションは、育てた働く軸をもとに、<br>次の一歩を決める場所です。<br><br>AIは、働く軸を育てます。<br>人との対話は、次の一歩につなげます。<br>どちらも、自分で納得して選ぶためにあります。</p>
     <div class="carefle-flow">
       <div class="carefle-node">
-        <div class="carefle-node-label">STEP 1</div>
-        <div class="carefle-node-title">キャリフレで<br>自分を整理</div>
-        <p class="carefle-node-desc">診断・内省チャット・日記で、モヤモヤを言葉に。持ち味レポやキャリア軸レポが育ちます。</p>
+        <div class="carefle-node-label">PHASE 1</div>
+        <div class="carefle-node-title">働く軸を育てる</div>
+        <p class="carefle-node-desc">診断・問い・日記・人生史・レポートを通じて、あなたが大切にしていることを言葉にします。</p>
       </div>
       <div class="carefle-arrow">→</div>
       <div class="carefle-node">
-        <div class="carefle-node-label">STEP 2</div>
-        <div class="carefle-node-title">キャリフレセッションで<br>深掘り</div>
-        <p class="carefle-node-desc">蓄積された内省をもとに対話。見落としや矛盾を一緒に照らします（初回60分・継続90分）。</p>
-      </div>
-      <div class="carefle-arrow">→</div>
-      <div class="carefle-node">
-        <div class="carefle-node-label">STEP 3</div>
-        <div class="carefle-node-title">キャリフレに<br>気づきを残す</div>
-        <p class="carefle-node-desc">セッション後の学びを日記や内省チャットに記録。次のセッション、次の選択につながります。</p>
+        <div class="carefle-node-label">PHASE 2</div>
+        <div class="carefle-node-title">次の一歩を決める</div>
+        <p class="carefle-node-desc">育った働く軸をもとに、現実の選択を一緒に整理します（初回60分・継続90分）。</p>
       </div>
     </div>
+    <p class="carefle-tagline">AIで育てる。人と決める。</p>
+    <p class="carefle-tagline-sub">AIが育てた働く軸を、現実の一歩につなげる。</p>
     <div class="carefle-points">
       <div class="carefle-point">
-        <h4>セッション前にキャリフレを使うと、対話が深まる</h4>
-        <p>内省ログやキャリア軸レポがあると、カウンセラーがあなたの文脈を理解したうえで伴走できます。初めての方も、セッション前にキャリフレで自己整理することをおすすめしています。</p>
-      </div>
-      <div class="carefle-point">
-        <h4>セッションご利用者は、キャリフレを期間限定で無料利用（③セッション特典）</h4>
-        <p>すでにキャリフレをお使いの方は、そのままセッションへ。キャリフレ未利用の方もセッションから始められます。セッション期間中は、キャリフレを期間限定で無料ご利用いただけます（フリープラン①やプレミアム初月無料②とは別の特典です）。</p>
+        <h4>働く軸があるから、決められる。</h4>
+        <p>キャリフレで積み重ねた日記や問い、キャリア軸レポがあるからこそ、「自分は何を大切にしたいのか」から対話を始められます。だから、限られた時間でも、本当に考えるべき次の一歩に集中できます。まずは、一人で働く軸を育てる。そして、決めきれないときだけ、人と話す。キャリフレは、そんな使い方をおすすめしています。</p>
       </div>
     </div>
+    <aside class="carefle-perk" aria-label="セッション特典">
+      <span class="carefle-perk-badge">③ セッション特典</span>
+      <h4>セッションご利用者は、キャリフレを期間限定で無料利用</h4>
+      <p>すでにキャリフレをお使いの方は、そのままセッションへ。キャリフレ未利用の方もセッションから始められます。セッション期間中は、キャリフレを期間限定で無料ご利用いただけます（フリープラン①やプレミアム初月無料②とは別の特典です）。</p>
+    </aside>
     <a class="carefle-link" href="https://carefle.jp/" target="_blank" rel="noopener noreferrer">キャリフレについて詳しく見る →</a>
   </div>
 </section>
@@ -474,23 +482,23 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
       <div class="feature-card">
         <span class="feature-label">FEATURE 01</span>
         <div class="feature-illus">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#2A9BB0" stroke-width="1.3"><circle cx="28" cy="22" r="10"/><path d="M14 48c0-8 6-14 14-14s14 6 14 14"/><path d="M38 18c4 0 8 3 8 8"/><path d="M42 20v6h-6"/></svg>
-        </div>
-        <div class="feature-body">
-          <h3>心理的安全を大切にする対話</h3>
-          <p>安心して気持ちを話せる、評価やジャッジのない場づくりを大切に。<strong>10年以上の有資格カウンセラー</strong>や<strong>元大手人材会社出身者</strong>が、あなたの声に丁寧に寄り添います。</p>
-          <span class="feature-tag">評価やジャッジは一切なし</span>
-        </div>
-      </div>
-      <div class="feature-card">
-        <span class="feature-label">FEATURE 02</span>
-        <div class="feature-illus">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#2A9BB0" stroke-width="1.3"><rect x="12" y="8" width="32" height="40" rx="3"/><path d="M20 18h16M20 26h16M20 34h10"/><circle cx="38" cy="38" r="10" fill="#E8F4F8" stroke="#2A9BB0"/></svg>
         </div>
         <div class="feature-body">
           <h3>キャリフレで「気づき」を残し、セッションとつなぐ</h3>
           <p>対話の前後をキャリフレの内省ログ・持ち味レポ・キャリア軸レポで可視化。あとから読み返せるから、気づきが定着し次の一歩につながります。<strong>求人紹介なしの中立支援</strong>で、あなた本来の選択を後押しします。</p>
           <span class="feature-tag">キャリフレ × キャリフレセッションの循環</span>
+        </div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-label">FEATURE 02</span>
+        <div class="feature-illus">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#2A9BB0" stroke-width="1.3"><circle cx="28" cy="22" r="10"/><path d="M14 48c0-8 6-14 14-14s14 6 14 14"/><path d="M38 18c4 0 8 3 8 8"/><path d="M42 20v6h-6"/></svg>
+        </div>
+        <div class="feature-body">
+          <h3>心理的安全を大切にする対話</h3>
+          <p>安心して気持ちを話せる、評価やジャッジのない場づくりを大切に。<strong>有資格カウンセラー</strong>や<strong>元大手人材会社出身者</strong>が、あなたの声に丁寧に寄り添います。</p>
+          <span class="feature-tag">評価やジャッジは一切なし</span>
         </div>
       </div>
       <div class="feature-card">
@@ -501,7 +509,7 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
         <div class="feature-body">
           <h3>単発から継続プログラムまで</h3>
           <p>単発セッションから継続プログラムまで、ご状況に合わせてお選びいただけます。キャリフレとの連携はどのコースでも可能です。料金の詳細は<a href="pricing.html" style="color:var(--accent-dark);">料金ページ</a>をご覧ください。<strong>秘密厳守</strong>で安心です。</p>
-          <span class="feature-tag">深く話したい方のための有料セッション（任意）</span>
+          <span class="feature-tag">迷ったときの有料セッション（任意）</span>
         </div>
       </div>
     </div>
@@ -515,14 +523,14 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
     <div class="voice-card">
       <div class="voice-avatar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
       <div class="voice-meta">30代 男性 SE</div>
-      <div class="voice-title">モヤモヤが言語化できました</div>
-      <p class="voice-text">少なくとも5年はキャリアを見直さなければと感じていましたが、ようやく踏み出せてよかった。真摯に向き合ってもらえて、満足感があります。</p>
+      <div class="voice-title">今の会社で頑張ることに決めました</div>
+      <p class="voice-text">話していく中で、「何が嫌なのか」ではなく、「どんな働き方を大切にしたいのか」が整理できました。結局、転職はせず、今の会社でもう一度挑戦してみることにしました。自分で決められたことが、一番大きな収穫でした。</p>
     </div>
     <div class="voice-card">
       <div class="voice-avatar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
-      <div class="voice-meta">30代 女性 研修企画</div>
-      <div class="voice-title">自分の良さに気づけた</div>
-      <p class="voice-text">自分の捉え方が変わり始めました。質問を通じて、自分の良いところをとても具体的に掘り起こしてもらえました。</p>
+      <div class="voice-meta">30代 女性 企画職</div>
+      <div class="voice-title">転職活動を始める前に受けました。</div>
+      <p class="voice-text">自分の経験を一緒に整理してもらえ、自分の強みや価値観を再確認しました。面接でも、自分の働く軸を自信を持って話せるようになりました。</p>
     </div>
     <div class="voice-card">
       <div class="voice-avatar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
@@ -545,7 +553,7 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
     のみこんでしまっている想いはありませんか？<br><br>
     まずは、お茶を飲むように、ゆっくりと。<br>
     「誰かの期待」ではなく、<br>
-    「あなたの心の声」を大切にする時間を。
+    「あなたの働く軸」を大切にする時間を。
   </p>
   <div class="mid-cta-btns">
     <a class="btn-session" href="https://line.me/R/ti/p/@824flemq" target="_blank" rel="noopener noreferrer">LINEから予約する &gt;</a>
@@ -656,8 +664,6 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
       <a class="nav-logo" href="careflesession.html" aria-label="キャリフレ・セッション">
         <img src="images/carefle-session-logo.png" alt="キャリフレ × セッション" width="896" height="98">
       </a>
-      <div class="footer-produced">運営</div>
-      <div class="footer-cp">株式会社キャリアパートナー</div>
     </div>
     <div class="footer-links">
       <a href="index.html">サービス全体像</a>
