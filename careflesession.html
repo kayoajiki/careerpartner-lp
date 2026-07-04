@@ -154,7 +154,8 @@ section{position:relative;}
 /* VOICES */
 .voices-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1080px;margin:0 auto;}
 .voice-card{background:white;border-radius:12px;padding:24px 20px;border-top:3px solid var(--accent-pale);box-shadow:0 2px 12px rgba(42,155,176,0.06);}
-.voice-avatar{width:48px;height:48px;border-radius:50%;background:var(--bg2);display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:var(--accent-light);}
+.voice-avatar{width:48px;height:48px;border-radius:50%;background:var(--bg2);margin-bottom:12px;overflow:hidden;flex-shrink:0;}
+.voice-avatar img{width:100%;height:100%;object-fit:cover;}
 .voice-meta{font-size:10px;color:var(--text-light);margin-bottom:10px;}
 .voice-title{font-size:14px;font-weight:700;color:var(--accent);margin-bottom:10px;line-height:1.5;}
 .voice-text{font-size:11px;color:var(--text-mid);line-height:1.9;}
@@ -419,25 +420,25 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
   <h2 class="section-title">お客様からの声</h2>
   <div class="voices-grid">
     <div class="voice-card">
-      <div class="voice-avatar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
+      <div class="voice-avatar"><img src="images/voices/voice-30s-male-se.png" alt="30代男性SE"></div>
       <div class="voice-meta">30代 男性 SE</div>
       <div class="voice-title">モヤモヤが言語化できました</div>
       <p class="voice-text">少なくとも5年はキャリアを見直さなければと感じていましたが、ようやく踏み出せてよかった。真摯に向き合ってもらえて、満足感があります。</p>
     </div>
     <div class="voice-card">
-      <div class="voice-avatar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
+      <div class="voice-avatar"><img src="images/voices/voice-40s-female-planning.png" alt="40代女性企画職"></div>
       <div class="voice-meta">30代 女性 企画職</div>
       <div class="voice-title">転職活動を始める前に受けました。</div>
       <p class="voice-text">自分の経験を一緒に整理してもらえ、自分の強みや価値観を再確認しました。面接でも、自分の働く軸を自信を持って話せるようになりました。</p>
     </div>
     <div class="voice-card">
-      <div class="voice-avatar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
-      <div class="voice-meta">30代 女性 企画職</div>
+      <div class="voice-avatar"><img src="images/voices/voice-20s-female-training.png" alt="20代女性研修企画"></div>
+      <div class="voice-meta">40代 女性 企画職</div>
       <div class="voice-title">強みに気づき行動へ</div>
       <p class="voice-text">無意識にやっていたことが強みだったと気づきました。人と話すことで得られる自己理解の深さは、かなり違うと感じました。</p>
     </div>
     <div class="voice-card">
-      <div class="voice-avatar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
+      <div class="voice-avatar"><img src="images/voices/voice-20s-male-consultant.png" alt="20代男性コンサルタント職"></div>
       <div class="voice-meta">30代 男性 コンサルタント</div>
       <div class="voice-title">人生の"芯"が見えた</div>
       <p class="voice-text">人生の転機でどんな価値観で決断してきたかを振り返ることで、積み上げてきた"芯"が見えました。点と点がつながった感覚です。</p>
