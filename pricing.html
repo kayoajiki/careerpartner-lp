@@ -88,6 +88,7 @@ section{position:relative;z-index:1;}
 .btn-plan-secondary:hover{background:var(--accent-pale);}
 .btn-plan-teal{background:var(--teal);color:white;}
 .btn-plan-teal:hover{background:#2A7A74;}
+.plan-cta-note{font-size:11px;color:var(--text-light);text-align:center;margin-top:10px;line-height:1.6;}
 
 /* セッション比較 */
 .session-compare{margin-top:48px;overflow-x:auto;}
@@ -188,7 +189,7 @@ footer{background:#061820;padding:28px 8vw;font-size:11px;color:rgba(126,200,216
         <div class="plan-label">FREE</div>
         <div class="plan-name">フリープラン</div>
         <div class="plan-service">キャリフレ ベーシック</div>
-        <div class="plan-desc" style="font-size:12px;color:var(--text-mid);line-height:1.8;margin-bottom:16px;">診断と日記の記録から、気軽に自分を見つめ直す</div>
+        <div class="plan-desc" style="font-size:12px;color:var(--text-mid);line-height:1.8;margin-bottom:16px;">診断と日記の記録から、気軽に自分を見つめ直す。<br>ここまでの記録は、プランを変えても残ります。</div>
         <div class="plan-price-wrap">
           <div class="plan-price">¥0</div>
           <div class="plan-price-unit">/ ずっと無料</div>
@@ -211,26 +212,22 @@ footer{background:#061820;padding:28px 8vw;font-size:11px;color:rgba(126,200,216
         <div class="plan-label">STANDARD</div>
         <div class="plan-name">プレミアム</div>
         <div class="plan-service">キャリフレ フル機能</div>
-        <div class="plan-desc" style="font-size:12px;color:var(--text-mid);line-height:1.8;margin-bottom:16px;">記録・対話するたびに進化するAIが、<br>客観的なフィードバックであなたの自己理解と内省を深くサポート</div>
+        <div class="plan-desc" style="font-size:12px;color:var(--text-mid);line-height:1.8;margin-bottom:16px;">フリープランで集めた記録はそのまま。<br>プレミアムでは、記録の先へ進めます。</div>
         <div class="plan-price-wrap">
           <div class="plan-price">¥1,480</div>
           <div class="plan-price-unit">/ 月（税込）</div>
         </div>
-        <div class="plan-price-sub">いつでも解約可能<br>初めの1ヶ月無料（プレミアムお申し込み時・決済画面の表示に従います）</div>
+        <div class="plan-price-sub">いつでも解約可能</div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li>フリープランのすべての機能（制限なし）</li>
-          <li>内省チャット（無制限）</li>
-          <li>日記AIフィードバック（無制限）</li>
-          <li>人生史の編集・追加</li>
-          <li>WCMシート作成・編集</li>
-          <li>自己診断の登録・編集</li>
-          <li>マイルストーン管理</li>
-          <li>持ち味レポート（更新可）</li>
+          <li>内省チャット・日記AI（無制限）</li>
+          <li>人生史・WCM・自己診断・マイルストーン</li>
+          <li>持ち味レポートの継続更新</li>
           <li>働く軸レポート</li>
         </ul>
         <div class="plan-cta">
           <a class="btn-plan btn-plan-secondary" href="https://carefle.jp/sign-up" target="_blank" rel="noopener noreferrer">プレミアムプランで始める</a>
+          <p class="plan-cta-note">初めの1ヶ月無料。期間中に解約すれば0円です。</p>
         </div>
       </div>
 
@@ -245,21 +242,17 @@ footer{background:#061820;padding:28px 8vw;font-size:11px;color:rgba(126,200,216
           <div class="plan-price">¥14,800</div>
           <div class="plan-price-unit">/ 年（税込）</div>
         </div>
-        <div class="plan-price-sub">月額換算 ¥1,233・2ヶ月分お得／いつでも解約可能<br>初めの1ヶ月無料（年間プランお申し込み時・決済画面の表示に従います）</div>
+        <div class="plan-price-sub">月額換算 ¥1,233・2ヶ月分お得／いつでも解約可能</div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li>プレミアムのすべての機能</li>
-          <li>内省チャット（無制限）</li>
-          <li>日記AIフィードバック（無制限）</li>
-          <li>人生史の編集・追加</li>
-          <li>WCMシート作成・編集</li>
-          <li>自己診断の登録・編集</li>
-          <li>マイルストーン管理</li>
-          <li>持ち味レポート（更新可）</li>
+          <li>内省チャット・日記AI（無制限）</li>
+          <li>人生史・WCM・自己診断・マイルストーン</li>
+          <li>持ち味レポートの継続更新</li>
           <li>働く軸レポート</li>
         </ul>
         <div class="plan-cta">
           <a class="btn-plan btn-plan-primary" href="https://carefle.jp/sign-up" target="_blank" rel="noopener noreferrer">年間プランで始める</a>
+          <p class="plan-cta-note">初めの1ヶ月無料。期間中に解約すれば0円です。</p>
         </div>
       </div>
     </div>
@@ -267,6 +260,7 @@ footer{background:#061820;padding:28px 8vw;font-size:11px;color:rgba(126,200,216
     <!-- プラン機能比較 -->
     <div class="session-compare plan-compare reveal" style="margin-top:56px;">
       <p style="font-size:12px;color:var(--text-light);margin-bottom:16px;letter-spacing:0.05em;">— プランの機能比較</p>
+      <p style="font-size:13px;color:var(--text-mid);margin-bottom:20px;line-height:1.8;">フリープランで体験した記録や診断は、そのまま残ります。プレミアムでは、記録の先へ進めます。</p>
       <table>
         <thead>
           <tr>
@@ -280,12 +274,12 @@ footer{background:#061820;padding:28px 8vw;font-size:11px;color:rgba(126,200,216
           <tr><td>日記（書き込み）</td><td class="hl">無制限</td><td class="hl">無制限</td></tr>
           <tr><td>日記AIフィードバック</td><td class="hl">10回まで</td><td class="hl"><span class="check">✓</span></td></tr>
           <tr><td>内省チャット</td><td class="hl">10回まで</td><td class="hl"><span class="check">✓</span></td></tr>
-          <tr><td>WCMシート作成・編集</td><td class="hl"><span class="cross">✕</span></td><td class="hl"><span class="check">✓</span></td></tr>
-          <tr><td>人生史の編集・追加</td><td class="hl"><span class="cross">✕</span></td><td class="hl"><span class="check">✓</span></td></tr>
-          <tr><td>自己診断の登録・編集</td><td class="hl"><span class="cross">✕</span></td><td class="hl"><span class="check">✓</span></td></tr>
-          <tr><td>マイルストーン管理</td><td class="hl"><span class="cross">✕</span></td><td class="hl"><span class="check">✓</span></td></tr>
+          <tr><td>WCMシート作成・編集</td><td class="hl">—</td><td class="hl"><span class="check">✓</span></td></tr>
+          <tr><td>人生史の編集・追加</td><td class="hl">—</td><td class="hl"><span class="check">✓</span></td></tr>
+          <tr><td>自己診断の登録・編集</td><td class="hl">—</td><td class="hl"><span class="check">✓</span></td></tr>
+          <tr><td>マイルストーン管理</td><td class="hl">—</td><td class="hl"><span class="check">✓</span></td></tr>
           <tr><td>持ち味レポート</td><td class="hl">初回のみ閲覧</td><td class="hl"><span class="check">✓</span></td></tr>
-          <tr><td>働く軸レポート</td><td class="hl"><span class="cross">✕</span></td><td class="hl"><span class="check">✓</span></td></tr>
+          <tr><td>働く軸レポート</td><td class="hl">—</td><td class="hl"><span class="check">✓</span></td></tr>
         </tbody>
       </table>
     </div>
