@@ -66,8 +66,9 @@ nav .nav-logo img{display:block;height:28px;width:auto;max-width:min(240px,62vw)
 .hero-choice{width:76px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;}
 .hero-choice-icon{width:52px;height:52px;border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--bg3);color:var(--text-light);}
 .hero-choice-label{font-size:10px;color:var(--text-mid);line-height:1.4;font-weight:500;}
-.hero-philosophy{border-left:1px solid var(--line);padding-left:16px;font-size:13px;color:var(--text-mid);line-height:1.8;max-width:240px;}
-.hero-philosophy em{display:block;font-style:normal;color:var(--accent);font-weight:600;margin-top:4px;}
+.hero-philosophy{border-left:1px solid var(--line);padding-left:16px;font-size:clamp(11px,3.4cqi,13px);color:var(--text-mid);line-height:1.7;flex:1 1 280px;min-width:min(100%,280px);}
+.hero-philosophy-lead{display:block;white-space:nowrap;}
+.hero-philosophy em{display:block;font-style:normal;color:var(--accent);font-weight:600;margin-top:2px;white-space:nowrap;}
 .hero-desc{font-size:13px;color:var(--text-mid);line-height:1.95;margin-bottom:24px;max-width:520px;}
 .hero-cta-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--accent-dark),var(--accent));color:white;font-size:16px;font-weight:600;padding:16px 28px;border-radius:12px;text-decoration:none;width:100%;max-width:420px;transition:opacity 0.2s,transform 0.2s;}
 .hero-cta-btn:hover{opacity:0.92;transform:translateY(-1px);}
@@ -82,7 +83,7 @@ nav .nav-logo img{display:block;height:28px;width:auto;max-width:min(240px,62vw)
   .hero-copy{padding:40px 5vw 28px;}
   .hero-visual{min-height:0;width:100%;aspect-ratio:4/5;max-height:min(62vh,560px);}
   .hero-visual img{object-position:42% 36%;}
-  .hero-philosophy{max-width:none;border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:12px;width:100%;}
+  .hero-philosophy{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:12px;width:100%;flex-basis:100%;min-width:0;}
   .hero-badge{width:124px;height:124px;right:14px;bottom:16px;padding:12px 10px;}
   .hero-badge-lead{font-size:11px;}
   .hero-badge-sub{font-size:10px;}
@@ -96,9 +97,11 @@ nav .nav-logo img{display:block;height:28px;width:auto;max-width:min(240px,62vw)
 
 /* SECTIONS */
 section{position:relative;}
-.section-wrap{padding:80px 5vw;max-width:1080px;margin:0 auto;}
+.section-wrap{padding:80px 5vw;max-width:1080px;margin:0 auto;container-type:inline-size;}
 .section-title{font-size:clamp(20px,3vw,26px);font-weight:700;color:var(--deep);text-align:center;margin-bottom:40px;line-height:1.6;}
 .section-lead{text-align:center;font-size:14px;color:var(--text-mid);max-width:720px;margin:-24px auto 16px;line-height:2;}
+.section-lead-2line{font-size:min(14px,calc(100cqi / 31));}
+.section-lead-2line .lead-line{display:block;white-space:nowrap;}
 .process-trust{text-align:center;font-size:13px;color:var(--text-light);max-width:640px;margin:0 auto 40px;line-height:1.9;}
 .section-tag{text-align:center;font-size:12px;color:var(--text-light);margin-bottom:12px;letter-spacing:0.1em;}
 .section-tag::before,.section-tag::after{content:'—';margin:0 8px;color:var(--accent-light);}
@@ -116,7 +119,8 @@ section{position:relative;}
 .pain-close{text-align:center;font-size:16px;font-weight:500;color:var(--deep);}
 
 /* STEPS */
-.steps-intro{text-align:center;font-size:14px;color:var(--text-mid);background:rgba(255,255,255,0.8);padding:16px 24px;border-radius:8px;max-width:720px;margin:32px auto 0;line-height:2;}
+.steps-intro{text-align:center;font-size:min(14px,calc(100cqi / 28));color:var(--text-mid);background:rgba(255,255,255,0.8);padding:16px 24px;border-radius:8px;max-width:720px;margin:32px auto 0;line-height:2;container-type:inline-size;}
+.steps-intro .lead-line{display:block;white-space:nowrap;}
 .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;}
 .steps-grid::before{content:'';position:absolute;top:52px;left:8%;right:8%;height:0;border-top:2px dotted var(--accent-light);z-index:0;}
 .step-card{background:white;border-radius:var(--radius);padding:28px 16px 24px;text-align:center;box-shadow:0 4px 20px rgba(42,155,176,0.08);position:relative;z-index:1;}
@@ -177,8 +181,10 @@ section{position:relative;}
 @media(max-width:500px){.voices-grid{grid-template-columns:1fr;}}
 
 /* MID CTA */
-.mid-cta{text-align:center;padding:80px 5vw;background:white;}
-.mid-cta-title{font-size:clamp(18px,3vw,24px);font-weight:500;color:var(--deep);line-height:2;margin-bottom:32px;}
+.mid-cta{text-align:center;padding:80px 5vw;background:white;container-type:inline-size;}
+.mid-cta-title{font-size:min(24px,calc(100cqi / 23));font-weight:500;color:var(--deep);line-height:1.85;margin-bottom:32px;}
+.mid-cta-title .lead-line{display:block;white-space:nowrap;}
+.mid-cta-title .lead-line:first-child{margin-bottom:0.55em;}
 .mid-cta-btns{display:flex;flex-direction:column;gap:14px;max-width:400px;margin:0 auto;}
 .btn-session{display:block;background:linear-gradient(135deg,var(--accent-dark),var(--accent));color:white;font-size:15px;font-weight:500;padding:16px 28px;border-radius:10px;text-decoration:none;transition:opacity 0.2s;}
 .btn-session:hover{opacity:0.9;}
@@ -203,6 +209,7 @@ section{position:relative;}
 .faq-q::before{content:'Q';font-weight:700;flex-shrink:0;}
 .faq-a{background:white;padding:18px 20px;font-size:12px;color:var(--text-mid);line-height:2;display:flex;gap:10px;}
 .faq-a::before{content:'A';font-weight:700;color:var(--accent);flex-shrink:0;}
+.keep{white-space:nowrap;}
 
 /* FOOTER */
 footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
@@ -275,7 +282,10 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
           <span class="hero-choice-label">働き方を変える</span>
         </div>
       </div>
-      <p class="hero-philosophy">どの選択をするかは、まだ決めなくていい。<em>まずは、自分の働く軸を整理する時間を。</em></p>
+      <p class="hero-philosophy">
+        <span class="hero-philosophy-lead">どの選択をするかは、まだ決めなくていい。</span>
+        <em>まずは、自分の働く軸を整理する時間を。</em>
+      </p>
     </div>
     <p class="hero-desc">キャリアカウンセラーとの対話を通じて、これまでの経験や今のモヤモヤを整理し、あなた自身の「働く軸」を言葉にしていきます。</p>
     <a class="hero-cta-btn" href="https://line.me/R/ti/p/@824flemq" target="_blank" rel="noopener noreferrer">
@@ -334,7 +344,10 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
   <div class="section-wrap">
     <div class="section-tag">セッションでできること</div>
     <h2 class="section-title" style="margin-top:8px;">対話で、働く軸を深める。</h2>
-    <p class="section-lead">相談の場ではなく、振り返りを続けるための対話の場です。<br>話して終わりではありません。働く軸を、一緒に言葉にしていきます。</p>
+    <p class="section-lead section-lead-2line">
+      <span class="lead-line">相談の場ではなく、振り返りを続けるための対話の場です。</span>
+      <span class="lead-line">話して終わりではありません。働く軸を、一緒に言葉にしていきます。</span>
+    </p>
     <p class="process-trust">安心して気持ちを話せる、評価やジャッジのない場づくりを大切にしています。</p>
     <div class="steps-grid">
       <div class="step-card">
@@ -370,7 +383,10 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
         <p class="step-desc">必要なら、転職・異動・今の会社での挑戦など、次の一歩につなげます。</p>
       </div>
     </div>
-    <p class="steps-intro">話す → 振り返る → 言葉にする → 次につなげる。その先に、自分で納得できる一歩があります。</p>
+    <p class="steps-intro">
+      <span class="lead-line">話す → 振り返る → 言葉にする → 次につなげる。</span>
+      <span class="lead-line">その先に、自分で納得できる一歩があります。</span>
+    </p>
     <div class="steps-footer-box">
       <span class="steps-footer-tag">求人紹介なし・中立支援</span>
       <p class="steps-footer-main">転職を勧めるためのセッションではありません。</p>
@@ -506,9 +522,9 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
 <!-- MID CTA -->
 <section class="mid-cta">
   <p class="mid-cta-title">
-    「このままでいいのかな」と思ったら。<br><br>
-    転職するかどうかを決める前に、<br>
-    一度、自分の働き方を振り返ってみませんか。
+    <span class="lead-line">「このままでいいのかな」と思ったら。</span>
+    <span class="lead-line">転職するかどうかを決める前に、</span>
+    <span class="lead-line">一度、自分の働き方を振り返ってみませんか。</span>
   </p>
   <div class="mid-cta-btns">
     <a class="btn-session" href="https://line.me/R/ti/p/@824flemq" target="_blank" rel="noopener noreferrer">空き日時を見る</a>
@@ -585,7 +601,7 @@ footer{background:white;padding:48px 5vw 32px;border-top:1px solid var(--line);}
       <div class="faq-q">どのような支払い方法が使えますか？</div>
       <div class="faq-a">お支払いはStripe（ストライプ）の決済システムをご利用いただきます。クレジットカード等で安全にお支払いいただけます。LINEで予約後、決済のご案内をお送りします。</div>
     </div>
-    <p style="text-align:center;margin-top:32px;font-size:13px;color:var(--text-mid);">料金の詳細は<a href="pricing.html" style="color:var(--accent);">料金ページ</a>を、ほかのご質問は<a href="faq.html" style="color:var(--accent);">FAQ</a>をご覧ください。</p>
+    <p style="text-align:center;margin-top:32px;font-size:13px;color:var(--text-mid);"><span class="keep">料金の詳細は<a href="pricing.html" style="color:var(--accent);">料金ページ</a>を、</span><span class="keep">ほかのご質問は<a href="faq.html" style="color:var(--accent);">FAQ</a>をご覧ください。</span></p>
   </div>
 </section>
 
