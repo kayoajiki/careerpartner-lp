@@ -79,14 +79,19 @@ nav .nav-logo img{display:block;height:28px;width:auto;max-width:min(240px,62vw)
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;min-height:auto;}
   .hero-copy{padding:40px 5vw 28px;}
-  .hero-visual{min-height:380px;}
+  .hero-visual{min-height:0;width:100%;aspect-ratio:4/5;max-height:min(62vh,560px);}
+  .hero-visual img{object-position:42% 36%;}
   .hero-philosophy{max-width:none;border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:12px;width:100%;}
-  .hero-badge{width:148px;height:148px;right:16px;bottom:16px;padding:14px 12px;}
+  .hero-badge{width:124px;height:124px;right:14px;bottom:16px;padding:12px 10px;}
+  .hero-badge-lead{font-size:11px;}
+  .hero-badge-sub{font-size:10px;}
 }
 @media(max-width:600px){
   .hero-title{font-size:clamp(20px,6.2vw,26px);}
   .hero-choice{width:70px;}
-  .hero-visual{min-height:320px;}
+  .hero-visual{aspect-ratio:3/4;max-height:min(58vh,520px);}
+  .hero-visual img{object-position:40% 32%;}
+  .hero-badge{width:112px;height:112px;right:12px;bottom:14px;padding:10px 8px;}
 }
 
 /* SECTIONS */
